@@ -1,0 +1,44 @@
+{
+  "name": "Codici memorizzati (Mode 03) su CAN: nessuno, uno e tre",
+  "source": "sintetica dagli esempi del datasheet ELM327 (OBD par. 15)",
+  "protocol": "6",
+  "headers": true,
+  "entries": [
+    {
+      "cmd": "03",
+      "note": "nessun codice: '43 00'",
+      "rx": ["7E8 02 43 00 00 00 00 00 00\r\r>"],
+      "atteso": { "kind": "dtc", "mode": 3, "codes": [] }
+    },
+    {
+      "cmd": "03",
+      "note": "un solo codice in un frame singolo",
+      "rx": ["7E8 04 43 01 01 33 00 00 00\r\r>"],
+      "atteso": { "kind": "dtc", "mode": 3, "codes": ["P0133"] }
+    },
+    {
+      "cmd": "03",
+      "note": "tre codici in due frame (primo frame + consecutivo)",
+      "rx": ["7E8 10 08 43 03 01 33 C1 00\r7E8 21 42 20 00 00 00 00 00\r\r>"],
+      "atteso": { "kind": "dtc", "mode": 3, "codes": ["P0133", "U0100", "C0220"] }
+    },
+    {
+      "cmd": "03",
+      "note": "motore con tre codici e cambio senza codici: i frame si alternano",
+      "rx": ["7E8 10 08 43 03 01 33 C1 00\r7E9 02 43 00 00 00 00 00 00\r7E8 21 42 20 00 00 00 00 00\r\r>"],
+      "atteso": { "kind": "dtc", "mode": 3, "codes": ["P0133", "U0100", "C0220"], "ecus": ["7E8", "7E9"] }
+    },
+    {
+      "cmd": "07",
+      "note": "codici pendenti",
+      "rx": ["7E8 04 47 01 03 00 00 00 00\r\r>"],
+      "atteso": { "kind": "dtc", "mode": 7, "codes": ["P0300"] }
+    },
+    {
+      "cmd": "0A",
+      "note": "ECU che non supporta i codici permanenti",
+      "rx": ["NO DATA\r\r>"],
+      "atteso": { "kind": "error", "code": "NO_DATA" }
+    }
+  ]
+}

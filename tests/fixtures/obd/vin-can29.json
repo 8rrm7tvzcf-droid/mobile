@@ -1,0 +1,19 @@
+{
+  "name": "VIN su CAN 29 bit (protocollo 7), intestazione di 4 byte",
+  "source": "sintetica; formato 18 DA F1 xx come nel datasheet ELM327 (OBD par. 9)",
+  "protocol": "7",
+  "headers": true,
+  "entries": [
+    {
+      "cmd": "0902",
+      "rx": ["18 DA F1 10 10 14 49 02 01 5A 46 41\r18 DA F1 10 21 31 39 39 30 30 30 30\r18 DA F1 10 22 31 32 33 34 35 36 37\r\r>"],
+      "atteso": { "kind": "vin", "vin": "ZFA19900001234567", "ecu": "18DAF110" }
+    },
+    {
+      "cmd": "0902",
+      "note": "stessa risposta con ATS0",
+      "rx": ["18DAF11010144902015A4641\r18DAF1102131393930303030\r18DAF1102231323334353637\r\r>"],
+      "atteso": { "kind": "vin", "vin": "ZFA19900001234567", "ecu": "18DAF110" }
+    }
+  ]
+}

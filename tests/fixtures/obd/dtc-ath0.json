@@ -1,0 +1,19 @@
+{
+  "name": "Codici con ATH0 (CAN, l'ELM327 riassembla)",
+  "source": "sintetica dagli esempi del datasheet ELM327 (OBD par. 15)",
+  "protocol": "6",
+  "headers": false,
+  "entries": [
+    {
+      "cmd": "03",
+      "rx": ["008\r0: 43 03 01 33 C1 00\r1: 42 20\r\r>"],
+      "atteso": { "kind": "dtc", "mode": 3, "codes": ["P0133", "U0100", "C0220"] }
+    },
+    {
+      "cmd": "03",
+      "note": "frame singolo",
+      "rx": ["43 02 01 33 C1 00\r\r>"],
+      "atteso": { "kind": "dtc", "mode": 3, "codes": ["P0133", "U0100"] }
+    }
+  ]
+}

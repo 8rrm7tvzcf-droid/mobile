@@ -1,0 +1,29 @@
+{
+  "name": "Init di un clone 'v1.5': ignora ATE0 (l'eco resta), NUL spuri, ATAMC/AT@1/STI rispondono '?'",
+  "source": "sintetica (OBD par. 1 e par. 6, SPEC 5.3)",
+  "protocol": "6",
+  "entries": [
+    { "cmd": "ATZ", "rx": ["ATZ\r\n\u0000\u0000\r\nELM327 v1.5\r\n\r\n>"] },
+    { "cmd": "ATE0", "rx": ["ATE0\r\nOK\r\n\r\n>"] },
+    { "cmd": "ATL0", "rx": ["ATL0\r\nOK\r\n\r\n>"] },
+    { "cmd": "ATS0", "rx": ["ATS0\rOK\r\r>"] },
+    { "cmd": "ATH1", "rx": ["ATH1\rOK\r\r>"] },
+    { "cmd": "ATAT1", "rx": ["ATAT1\rOK\r\r>"] },
+    { "cmd": "ATRV", "rx": ["ATRV\r12.1V\r\r>"] },
+    { "cmd": "ATSP0", "rx": ["ATSP0\rOK\r\r>"] },
+    { "cmd": "0100", "rx": ["0100\r", "SEARCHING...\r", "7E8064100BE3EB81100\r\r>"] },
+    { "cmd": "ATDPN", "rx": ["ATDPN\rA6\r\r>"] },
+    { "cmd": "ATI", "rx": ["ATI\rELM327 v1.5\r\r>"] },
+    { "cmd": "AT@1", "rx": ["AT@1\r?\r\r>"] },
+    { "cmd": "STI", "rx": ["STI\r?\r\r>"] },
+    { "cmd": "ATAMC", "rx": ["ATAMC\r?\r\r>"] }
+  ],
+  "atteso": {
+    "protocol": "6",
+    "voltage": 12.1,
+    "ecus": ["7E8"],
+    "suspectedClone": true,
+    "cloneReasons": ["VERSION_1_5_DOES_NOT_EXIST"],
+    "amcSupported": false
+  }
+}

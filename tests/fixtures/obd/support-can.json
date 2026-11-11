@@ -1,0 +1,21 @@
+{
+  "name": "Maschere dei PID supportati (0100) con due ECU",
+  "source": "sintetica: 41 00 BE 3E B8 11 dall'esempio di OBD par. 10; seconda ECU illustrativa",
+  "protocol": "6",
+  "headers": true,
+  "entries": [
+    {
+      "cmd": "0100",
+      "rx": ["SEARCHING...\r", "7E8 06 41 00 BE 3E B8 11 00\r7E9 06 41 00 98 18 00 01 00\r\r>"],
+      "atteso": {
+        "kind": "support",
+        "base": 0,
+        "byEcu": {
+          "7E8": [1, 3, 4, 5, 6, 7, 11, 12, 13, 14, 15, 17, 19, 20, 21, 28, 32],
+          "7E9": [1, 4, 5, 12, 13, 32]
+        },
+        "union": [1, 3, 4, 5, 6, 7, 11, 12, 13, 14, 15, 17, 19, 20, 21, 28, 32]
+      }
+    }
+  ]
+}

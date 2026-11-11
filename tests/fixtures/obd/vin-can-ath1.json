@@ -1,0 +1,30 @@
+{
+  "name": "VIN su CAN 11 bit con ATH1 (frame grezzi, ISO-TP)",
+  "source": "sintetica: stesso formato del datasheet ELM327 (OBD par. 9); VIN fittizio",
+  "protocol": "6",
+  "headers": true,
+  "entries": [
+    {
+      "cmd": "0902",
+      "rx": [
+        "7E8 10 14 49 02 01 5A 46 41\r7E8 21 31 39 39 30 30 30 30\r",
+        "7E8 22 31 32 33 34 35 36 37\r\r>"
+      ],
+      "atteso": { "kind": "vin", "vin": "ZFA19900001234567", "ecu": "7E8" }
+    },
+    {
+      "cmd": "0902",
+      "note": "stesso VIN con ATS0 (senza spazi): l'id a 3 cifre si riconosce dal protocollo",
+      "rx": ["7E810144902015A4641\r7E82131393930303030\r7E82231323334353637\r\r>"],
+      "atteso": { "kind": "vin", "vin": "ZFA19900001234567", "ecu": "7E8" }
+    },
+    {
+      "cmd": "0902",
+      "note": "due ECU rispondono con lo stesso VIN, frame mescolati (7E9 = secondo modulo)",
+      "rx": [
+        "7E8 10 14 49 02 01 5A 46 41\r7E9 10 14 49 02 01 5A 46 41\r7E8 21 31 39 39 30 30 30 30\r7E9 21 31 39 39 30 30 30 30\r7E9 22 31 32 33 34 35 36 37\r7E8 22 31 32 33 34 35 36 37\r\r>"
+      ],
+      "atteso": { "kind": "vin", "vin": "ZFA19900001234567", "ecu": "7E8" }
+    }
+  ]
+}

@@ -1,11 +1,11 @@
 {
   "expo": {
-    "name": "mobile",
-    "slug": "mobile",
+    "name": "MyGarage",
+    "slug": "mygarage",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/images/icon.png",
-    "scheme": "mobile",
+    "scheme": "mygarage",
     "userInterfaceStyle": "automatic",
     "ios": {
       "icon": "./assets/expo.icon"
@@ -17,7 +17,12 @@
         "backgroundImage": "./assets/images/android-icon-background.png",
         "monochromeImage": "./assets/images/android-icon-monochrome.png"
       },
-      "predictiveBackGestureEnabled": false
+      "predictiveBackGestureEnabled": false,
+      "allowBackup": false,
+      "blockedPermissions": [
+        "android.permission.SCHEDULE_EXACT_ALARM",
+        "android.permission.USE_EXACT_ALARM"
+      ]
     },
     "web": {
       "output": "static",
@@ -32,7 +37,36 @@
           "image": "./assets/images/splash-icon.png",
           "imageWidth": 76
         }
-      ]
+      ],
+      "expo-build-properties",
+      "expo-sqlite",
+      [
+        "react-native-ble-manager",
+        {
+          "bluetoothAlwaysPermission": "MyGarage usa il Bluetooth per leggere i dati dall'adattatore OBD-II della tua auto.",
+          "neverForLocation": true,
+          "isBleRequired": false
+        }
+      ],
+      [
+        "expo-notifications",
+        {
+          "defaultChannel": "deadlines"
+        }
+      ],
+      [
+        "expo-image-picker",
+        {
+          "photosPermission": "MyGarage accede alle tue foto solo quando scegli un'immagine da allegare a una spesa, a un tagliando o a un documento dell'auto.",
+          "cameraPermission": "MyGarage usa la fotocamera solo quando scatti una foto da allegare (ricevuta, fattura, libretto, danno).",
+          "microphonePermission": false
+        }
+      ],
+      "expo-sharing",
+      "expo-secure-store",
+      "expo-localization",
+      "expo-background-task",
+      "@react-native-community/datetimepicker"
     ],
     "experiments": {
       "typedRoutes": true,

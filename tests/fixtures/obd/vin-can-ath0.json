@@ -1,0 +1,13 @@
+{
+  "name": "VIN su CAN con ATH0 (l'ELM327 riassembla, righe '014' / '0:' / '1:')",
+  "source": "sintetica dal datasheet ELM327 (OBD par. 9)",
+  "protocol": "6",
+  "headers": false,
+  "entries": [
+    {
+      "cmd": "0902",
+      "rx": ["014\r0: 49 02 01 5A 46 41\r1: 31 39 39 30 30 30 30\r2: 31 32 33 34 35 36 37\r\r>"],
+      "atteso": { "kind": "vin", "vin": "ZFA19900001234567" }
+    }
+  ]
+}

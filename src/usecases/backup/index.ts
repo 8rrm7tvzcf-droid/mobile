@@ -1,0 +1,20 @@
+// Backup, ripristino, esportazione e cancellazione dei dati (SPEC F-06..F-09, 8.5): API pubblica del modulo.
+export { exportBackup, backupFileName, collectBackupData, KEEP_BACKUPS } from './export';
+export type { ExportBackupOptions, ExportBackupResult, SkippedBackupFile } from './export';
+export { getBackupStatus, NUDGE_MIN_CHANGES } from './status';
+export type { BackupStatus } from './status';
+export { inspectBackup, importBackup } from './import';
+export type { BackupPreview, ImportMode, ImportOptions, ImportResult, InspectOptions, PlateConflict, TableImportStats } from './import';
+export { exportCsv } from './exportCsv';
+export type { ExportCsvOptions, ExportCsvResult } from './exportCsv';
+export { CSV_ENTITY_NAMES } from './csvEntities';
+export type { CsvEntityName, CsvScope } from './csvEntities';
+export { toCsv, neutralizeFormula, formatScaled } from './csv';
+export type { CsvColumn, CsvVariant } from './csv';
+export { wipeAllData } from './wipe';
+export type { WipeDeps, WipeReport } from './wipe';
+export { BACKUP_FORMAT, FORMAT_VERSION, UPGRADERS, upgradeBackup } from './format';
+export type { BackupDocument, FormatUpgrader } from './format';
+export { MAX_ARCHIVE_BYTES, isSafeEntryName } from './archive';
+export { BackupAbort } from './errors';
+export type { BackupError, BackupErrorCode, BackupResult } from './errors';

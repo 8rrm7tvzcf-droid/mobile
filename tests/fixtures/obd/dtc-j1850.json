@@ -1,0 +1,13 @@
+{
+  "name": "Codici su J1850 (3 slot da 2 byte, con padding 00 00)",
+  "source": "sintetica dal datasheet ELM327 (OBD par. 15); checksum non reale",
+  "protocol": "2",
+  "headers": true,
+  "entries": [
+    {
+      "cmd": "03",
+      "rx": ["48 6B 10 43 01 33 C1 00 00 00 A1\r\r>"],
+      "atteso": { "kind": "dtc", "mode": 3, "codes": ["P0133", "U0100"] }
+    }
+  ]
+}

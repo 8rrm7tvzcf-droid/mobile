@@ -1,0 +1,16 @@
+{
+  "name": "VIN su J1850 VPW (5 messaggi con indice, 3 byte di filler)",
+  "source": "sintetica (OBD par. 9); i byte di checksum/CRC non sono reali e il parser non li verifica",
+  "protocol": "2",
+  "headers": true,
+  "entries": [
+    {
+      "cmd": "0902",
+      "rx": [
+        "48 6B 10 49 02 01 00 00 00 5A A1\r48 6B 10 49 02 02 46 41 31 39 A1\r48 6B 10 49 02 03 39 30 30 30 A1\r",
+        "48 6B 10 49 02 04 30 31 32 33 A1\r48 6B 10 49 02 05 34 35 36 37 A1\r\r>"
+      ],
+      "atteso": { "kind": "vin", "vin": "ZFA19900001234567", "ecu": "10" }
+    }
+  ]
+}

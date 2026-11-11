@@ -1,0 +1,22 @@
+{
+  "name": "Stringhe di errore dell'ELM327",
+  "source": "datasheet ELM327 p.86-89 (OBD par. 7)",
+  "protocol": "6",
+  "headers": true,
+  "entries": [
+    { "cmd": "010C", "rx": ["NO DATA\r\r>"], "atteso": { "kind": "error", "code": "NO_DATA" } },
+    { "cmd": "0100", "rx": ["SEARCHING...\rUNABLE TO CONNECT\r\r>"], "atteso": { "kind": "error", "code": "UNABLE_TO_CONNECT" } },
+    { "cmd": "0100", "rx": ["SEARCHING...UNABLE TO CONNECT\r\r>"], "atteso": { "kind": "error", "code": "UNABLE_TO_CONNECT" } },
+    { "cmd": "010C", "rx": ["STOPPED\r\r>"], "atteso": { "kind": "error", "code": "STOPPED" } },
+    { "cmd": "010C", "rx": ["BUS BUSY\r\r>"], "atteso": { "kind": "error", "code": "BUS_BUSY" } },
+    { "cmd": "010C", "rx": ["CAN ERROR\r\r>"], "atteso": { "kind": "error", "code": "CAN_ERROR" } },
+    { "cmd": "010C", "rx": ["BUFFER FULL\r\r>"], "atteso": { "kind": "error", "code": "BUFFER_FULL" } },
+    { "cmd": "010C", "rx": ["<DATA ERROR\r\r>"], "atteso": { "kind": "error", "code": "DATA_ERROR" } },
+    { "cmd": "010C", "rx": ["LV RESET\r\r>"], "atteso": { "kind": "error", "code": "LV_RESET" } },
+    { "cmd": "010C", "rx": ["ERR94\r\r>"], "atteso": { "kind": "error", "code": "ERR94" } },
+    { "cmd": "0105", "rx": ["\u0000NO DATA\r\u0000\r>"], "atteso": { "kind": "error", "code": "NO_DATA" }, "note": "byte NUL spuri" },
+    { "cmd": "ATAMC", "rx": ["?\r\r>"], "atteso": { "kind": "error", "code": "UNKNOWN_COMMAND" } },
+    { "cmd": "0902", "rx": ["7E8 03 7F 09 11 00 00 00 00\r\r>"], "atteso": { "kind": "error", "code": "NEGATIVE_RESPONSE", "nrc": 17 } },
+    { "cmd": "010C", "rx": ["7E8 03 7F 01 78 00 00 00 00\r\r>"], "atteso": { "kind": "error", "code": "RESPONSE_PENDING", "nrc": 120 } }
+  ]
+}
