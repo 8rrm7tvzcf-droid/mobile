@@ -14,6 +14,21 @@ un posto solo. Pensata per l'Italia (regole di revisione e bollo, testi in itali
   le comunicazioni ufficiali ne' i controlli sul Portale dell'Automobilista, ACI,
   Agenzia delle Entrate o IVASS.
 
+## Com'e' fatta
+
+Schermate dell'anteprima web su formato telefono, con l'auto di esempio e dati inventati
+(targa e telaio compresi).
+
+| Oggi | Scadenze | Costi |
+| :---: | :---: | :---: |
+| <img src="docs/screenshots/01-oggi.png" alt="Schermata Oggi: la prossima scadenza con i pulsanti Fatto e Rimanda" width="230"> | <img src="docs/screenshots/03-scadenze.png" alt="Elenco delle scadenze con il semaforo per ogni voce" width="230"> | <img src="docs/screenshots/04-costi.png" alt="Costi: totale, costo al chilometro e ripartizione" width="230"> |
+| La prossima scadenza, con **Fatto** e **Rimanda** | Un semaforo per ogni scadenza | Totale, costo al km e da cosa dipende |
+
+| Scheda auto | Compila dal libretto | Date dei documenti |
+| :---: | :---: | :---: |
+| <img src="docs/screenshots/02-scheda-auto.png" alt="Scheda auto con chilometri e scadenze" width="230"> | <img src="docs/screenshots/05-compila-dal-libretto.png" alt="Compila dal libretto: i dati riconosciuti dal testo incollato" width="230"> | <img src="docs/screenshots/06-date-dei-documenti.png" alt="Date dei documenti: immatricolazione, revisione, bollo e assicurazione" width="230"> |
+| Km e scadenze dell'auto | Legge il testo copiato dalla foto del libretto | Revisione, bollo e assicurazione in una schermata |
+
 ## Cosa e' stato provato
 
 - Dominio, dati e casi d'uso: oltre 2300 test automatici (vitest), controllo dei tipi
