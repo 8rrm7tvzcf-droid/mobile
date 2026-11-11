@@ -1,21 +1,30 @@
-The MIT License (MIT)
+Copyright (c) 2026 Samuele Castagna. Tutti i diritti riservati.
+Copyright (c) 2026 Samuele Castagna. All rights reserved.
 
-Copyright (c) 2015-present 650 Industries, Inc. (aka Expo)
+IT
+Il codice sorgente e i documenti di questo repository sono resi visibili al pubblico
+solo per consultazione. Non e' concessa alcuna licenza per usare, copiare, modificare,
+unire, pubblicare, distribuire, concedere in sublicenza o vendere il software o parti di
+esso, ne' per creare opere derivate, senza il previo consenso scritto del titolare dei
+diritti. Resta salvo quanto previsto dai Termini di servizio di GitHub (visione e
+"fork" del repository all'interno di GitHub).
 
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
+Il nome "MyGarage" e' usato qui come nome di lavoro del progetto: non e' concesso alcun
+diritto sul nome ne' sui loghi.
 
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
+I componenti di terze parti sono soggetti alle rispettive licenze: vedi
+THIRD_PARTY_LICENSES.md. Il software e' fornito "cosi' com'e'", senza garanzie di alcun
+tipo.
 
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
+EN
+The source code and documents in this repository are made publicly visible for viewing
+only. No licence is granted to use, copy, modify, merge, publish, distribute, sublicense
+or sell the software or any part of it, or to create derivative works, without the prior
+written permission of the copyright holder. This is subject to the GitHub Terms of
+Service (viewing and forking the repository within GitHub).
+
+The name "MyGarage" is a working title for the project: no rights are granted in the name
+or in any logo.
+
+Third-party components are subject to their own licences: see THIRD_PARTY_LICENSES.md.
+The software is provided "as is", without warranty of any kind.
